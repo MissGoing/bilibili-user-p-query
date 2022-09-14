@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "B站成分查询",
+    "description": "B站成分查询",
+    "version": "1.0.0",
+    "permissions": [
+        "tabs",
+        "*://*.bilibili.com/*"
+    ],
+    "browser_action": {
+        "default_title": "B站成分查询",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.bilibili.com/*"
+            ],
+            "js": [
+                "js/dom7.js",
+                "js/axios.js",
+                "js/const.js",
+                "js/util.js",
+                "js/content.js"
+            ],
+            "css" : ["css/content.css"]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+custom-item {
+    font-weight: bold;
+}
+
+custom {
+    margin-right: 0px;
+}
+
+custom2 {
+    color: black;
+    display: none;
+    font-weight: bold;
+}
+
+custom2.show {
+    display: inline;
+}
