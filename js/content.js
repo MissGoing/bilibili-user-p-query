@@ -23,8 +23,13 @@ async function xSpace(mid, call) {
     if (jsonString == void (0)) {
         var rsp = await xr.get(`https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/space?&host_mid=${mid}`)
         if (rsp.status == 200) {
-            var m = rsp.data.data.items.map(t => t.modules).map(t=>t.module_dynamic)
-            jsonString = JSON.stringify(m)
+            // var m = rsp.data.data.items.map(t => t.modules).map(t => t.module_dynamic)
+            // var c = rsp.data.data.items.map(t => {
+            //     return { c: t.modules, a: t.orig.modules }
+            // })
+            // var s = c.map(t => { c:t.c, s: t.module_dynamic })
+            // console.log(c)
+            jsonString = JSON.stringify(rsp.data.data)
             cache[mid + "xs"] = jsonString
         }
     }
